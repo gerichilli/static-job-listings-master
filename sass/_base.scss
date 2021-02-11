@@ -1,0 +1,40 @@
+// Color:
+$dark-cyan: hsl(180, 29%, 50%);
+$light-gray-1: hsl(180, 52%, 96%); //Light Grayish Cyan (Background)
+$light-gray-2: hsl(180, 31%, 95%); //Light Grayish Cyan (Filter Tablets)
+$dark-gray-1: hsl(180, 8%, 52%);
+$dark-gray-2: hsl(180, 14%, 20%);
+$white: #ffffff;
+
+// Typography:
+$default-font-size: 1.5rem;
+$font-family: "Spartan", sans-serif;
+
+// Spacing:
+$wide-spacing: 7.5rem;
+
+// Box -shadow
+$shadow: 1px 1px 15px 3px rgba($dark-cyan, 0.3);
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $default-font-size;
+  font-weight: 300;
+  line-height: 1.7;
+  background-color: $light-gray-1;
+}
+
+// Typography
