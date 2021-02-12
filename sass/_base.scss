@@ -37,4 +37,13 @@ body {
   background-color: $light-gray-1;
 }
 
+a {
+  text-decoration: none;
+}
+
 // Typography
+.text {
+  &--cyan {
+    color: $dark-cyan;
+  }
+}
