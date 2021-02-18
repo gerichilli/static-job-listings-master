@@ -16,12 +16,47 @@ $wide-spacing: 7.5rem;
 // Box -shadow
 $shadow: 1px 1px 15px 3px rgba($dark-cyan, 0.3);
 
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-medium {
+    @media only screen and (max-width: 62.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: 87.5em) {
+      @content;
+    }
+  }
+}
+
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+*:focus {
+  border: 0;
+  outline: none;
 }
 
 html {
@@ -35,6 +70,10 @@ body {
   font-weight: 300;
   line-height: 1.7;
   background-color: $light-gray-1;
+
+  @include respond(tab-land) {
+    font-size: 1.4rem;
+  }
 }
 
 a {
